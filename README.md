@@ -1,53 +1,44 @@
-Kharis Lost & Found
 
+# Kharis Lost & Found
 <p align="center">
-  <strong>A modern digital lost & found platform for churches and multi-branch organisations.</strong>
+  <strong>A digital lost & found platform for churches and multi-branch organisations.</strong>
+</p>
+<p align="center">
+  Report, discover, claim and return lost property through one simple platform.
 </p>
 <p align="center">
   <a href="https://ruthhilary.github.io/KharisLost-Found/">
-    <img src="https://img.shields.io/badge/LIVE%20DEMO-6C4AB6?style=for-the-badge" alt="Live Demo">
+    <img src="https://img.shields.io/badge/Live%20Demo-6C4AB6?style=for-the-badge" alt="Live Demo">
   </a>
   <a href="https://github.com/Ruthhilary/KharisLost-Found">
-    <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
   </a>
-  <img src="https://img.shields.io/badge/STATUS-ACTIVE%20DEVELOPMENT-2EA44F?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Status-Active%20Development-2EA44F?style=for-the-badge" alt="Active Development">
 </p>
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#features">Features</a> •
   <a href="#technology">Technology</a> •
-  <a href="#roadmap">Roadmap</a> •
-  <a href="#getting-started">Getting Started</a>
+  <a href="#architecture">Architecture</a> •
+  <a href="#roadmap">Roadmap</a>
 </p>
-
-⸻
-
-#Overview
-
-Kharis Lost & Found is a responsive web application designed to modernise the way churches and multi-branch organisations manage lost property.
-
-Instead of relying on paper records, group chats or disconnected spreadsheets, Kharis provides a structured digital workflow for reporting, discovering, claiming and returning lost belongings.
-
-The workflow
-
+---
+## Overview
+**Kharis Lost & Found** is a responsive web application designed to modernise how churches and multi-branch organisations manage lost property.
+Instead of relying on paper records, group messages or disconnected spreadsheets, Kharis provides a structured workflow for reporting, discovering, claiming and returning belongings.
+### Core workflow
+```text
 Report → Discover → Claim → Verify → Return
 
-The platform is designed with two primary experiences:
-
-* Members can report, search, question and claim items.
-* Administrators can manage reports, claims, branches and member interactions.
+The platform provides separate experiences for members and administrators, while supporting multiple branches within the organisation.
 
 ⸻
 
-Live Demo
+Live Application
 
-<p align="center">
+Launch Kharis Lost & Found →⁠￼
 
-→ Launch Kharis Lost & Found
-
-</p>
-
-The application is deployed using GitHub Pages and can be accessed directly from a modern web browser.
+The current application is deployed using GitHub Pages and is accessible directly from a modern web browser.
 
 ⸻
 
@@ -55,192 +46,149 @@ Features
 
 Member Experience
 
-Report an Item
-
-Members can submit lost or found items with:
-
-* Item name
-* Category
-* Description
-* Location
-* Branch
-* Photograph
-* Additional notes
-
-Search & Discovery
-
 Members can:
 
-* Search reported items
-* Filter by category
-* Browse item cards
-* View item information
+* Report lost or found items
+* Upload photographs
+* Add item descriptions and locations
+* Select a branch
+* Browse reported items
+* Search and filter items
+* Submit claims
+* Add claim notes
 * Ask questions about items
-
-Claims
-
-Members can identify an item as theirs and submit a claim.
-
-Claims can include additional notes to help administrators verify ownership.
+* Request a branch change
+* Change language preferences
+* Use light or dark mode
 
 ⸻
 
 Administration
 
-Item Management
-
 Administrators can:
 
 * View reported items
-* Search and filter items
+* Search and filter missing items
+* Review item details
 * View uploaded photographs
-* Review item information
+* Review member claims
 * Assign items to members
 * Mark items as donated
-* Return incorrectly claimed items
+* Return incorrectly claimed items to Missing Items
+* View unanswered questions
+* Respond to member questions
 * Manage branch-specific information
-
-Questions & Replies
-
-Members can ask questions about an item.
-
-Administrators can view unanswered questions and respond directly from the item management interface.
-
-Admin Notifications
-
-When a member reports an item, administrators can receive:
-
-* Notification badges
-* Dashboard alerts
-* Toast notifications
-* Confirmation sounds
-
-Optional email notifications are available through EmailJS.
+* Receive new-item notifications
+* Configure email notifications
+* Manage application settings
 
 ⸻
 
 Multi-Branch Support
 
-Kharis Lost & Found is designed for organisations operating across multiple branches.
+Kharis is designed around a multi-branch organisation structure.
 
-Users select their branch when using the platform, while administrators can manage information relevant to their branch.
+Users select the branch they belong to, while administrators can manage information relevant to their branch.
 
 The main administrator can oversee activity across the wider organisation.
 
-                         KHARIS
-                           │
-              ┌────────────┴────────────┐
-              │                         │
-           BRANCH 1                  BRANCH 2
-              │                         │
-        ┌─────┴─────┐             ┌─────┴─────┐
-        │           │             │           │
-      Users       Admins        Users       Admins
+Organisation
+│
+├── Branch 01
+│   ├── Members
+│   └── Administrators
+│
+├── Branch 02
+│   ├── Members
+│   └── Administrators
+│
+└── Branch 03
+    ├── Members
+    └── Administrators
 
 ⸻
 
 Responsive Design
 
-Kharis is designed to work across:
+Kharis is designed to work across different screen sizes.
 
 Platform	Support
-📱 Mobile	✓
-📲 iPhone	✓
-📲 iPad	✓
-💻 Laptop	✓
-🖥️ Desktop	✓
+Mobile	✓
+iPhone	✓
+iPad	✓
+Tablet	✓
+Laptop	✓
+Desktop	✓
 
-Mobile
-
-The interface includes:
+The mobile interface includes:
 
 * Touch-friendly controls
 * Larger buttons
 * Bottom-sheet modals
 * Horizontal table scrolling
 * Swipeable categories
-* Two-column item cards
-* iOS-safe input sizing
+* Responsive item cards
+* iOS-friendly input sizing
 * Safe-area support
 
-Tablet
-
-The layout automatically adapts to tablet-sized screens.
-
-Desktop
-
-Administrators receive a larger workspace for managing reports, claims and branches.
-
 ⸻
 
-Dark Mode
+Image Uploads
 
-Kharis includes a dedicated dark interface designed for comfortable use in low-light environments.
-
-The interface remembers the user’s selected appearance so it remains consistent after refreshing the page.
-
-⸻
-
-Smart Image Uploads
-
-Large photographs from mobile devices can quickly consume browser storage.
+Phone photographs can be several megabytes in size and can quickly consume browser storage.
 
 Kharis automatically compresses uploaded images before saving them.
 
-┌───────────────────┐
-│   Select Image    │
-└─────────┬─────────┘
-          ↓
-┌───────────────────┐
-│ Compress Image    │
-└─────────┬─────────┘
-          ↓
-┌───────────────────┐
-│ Attempt Save      │
-└─────────┬─────────┘
-          ↓
-     ┌────┴────┐
-     │         │
-   Success   Storage Full
-     │         │
-     ↓         ↓
-   Saved    Compress Again
-               │
-               ↓
-          Save / Alert
+Select Image
+     │
+     ▼
+Compress Image
+     │
+     ▼
+Attempt Save
+     │
+     ├── Success ──→ Save Item
+     │
+     └── Failure
+            │
+            ▼
+      Compress Again
+            │
+            ▼
+        Save / Alert
 
-This prevents large phone photographs from silently causing submissions to fail.
+If storage remains unavailable, the application informs the user instead of silently adding an item that will disappear after refresh.
 
 ⸻
 
 Notifications
 
-Kharis supports both in-app and optional email notifications.
+Administrators can receive in-app alerts when members report items.
 
-In-App Notifications
-
-When a new item is reported:
+The notification flow includes:
 
 New Report
-    ↓
+    │
+    ▼
 Notification Badge
-    ↓
+    │
+    ▼
 Dashboard Alert
-    ↓
-Toast
-    ↓
+    │
+    ▼
+Toast Notification
+    │
+    ▼
 Confirmation Sound
 
-Email Notifications
+Optional email notifications can be configured using EmailJS⁠￼.
 
-Administrators can configure EmailJS to receive report notifications.
-
-Available information includes:
+Email notifications can include:
 
 Field	Description
 to_email	Administrator email
 item_name	Reported item
-location	Where it was found
+location	Item location
 branch	Relevant branch
 reported_by	Reporting member
 day	Report date
@@ -249,7 +197,7 @@ day	Report date
 
 Internationalisation
 
-Kharis supports multiple languages.
+Kharis currently supports nine languages:
 
 Language	Status
 English	✓
@@ -262,7 +210,26 @@ Krio	✓
 Twi	✓
 Patois	✓
 
-Note: Twi, Krio and Patois translations should be reviewed by native speakers before production deployment.
+Translation note: Twi, Krio and Patois translations should be reviewed by native speakers before production deployment.
+
+⸻
+
+User Interface
+
+The interface includes:
+
+* Light and dark themes
+* Responsive navigation
+* Search and filtering
+* Interactive item cards
+* Toast notifications
+* Confirmation sounds
+* Mobile-friendly dialogs
+* Persistent settings
+* Scrollable navigation
+* Responsive layouts
+
+User preferences such as language, theme, active tab and relevant filters can persist between sessions.
 
 ⸻
 
@@ -272,69 +239,66 @@ Frontend
 
 Services
 
-Core Technologies
+Core technologies
 
 * HTML5 — Application structure
-* CSS3 — Responsive interface and visual design
+* CSS3 — Layout and responsive design
 * JavaScript — Application logic and interactions
 * Browser Storage — Local persistence
-* EmailJS — Optional administrator email notifications
+* Client-side image compression — Optimised uploads
+* EmailJS — Optional email notifications
 * GitHub Pages — Static deployment
 
 ⸻
 
 Architecture
 
-The current version is intentionally lightweight and primarily browser-based.
+The current release is intentionally lightweight and primarily browser-based.
 
-                    ┌─────────────────────┐
-                    │  KHARIS LOST & FOUND │
-                    └──────────┬──────────┘
-                               │
-                 ┌─────────────┴─────────────┐
-                 │                           │
-          ┌──────▼──────┐             ┌──────▼──────┐
-          │   MEMBERS   │             │    ADMINS   │
-          └──────┬──────┘             └──────┬──────┘
-                 │                           │
-                 └─────────────┬─────────────┘
-                               │
-                       ┌───────▼───────┐
-                       │ WEB APP       │
-                       └───────┬───────┘
-                               │
-                    ┌──────────┴──────────┐
-                    │                     │
-             ┌──────▼──────┐       ┌──────▼──────┐
-             │   Browser   │       │   EmailJS   │
-             │   Storage   │       │   Alerts    │
-             └─────────────┘       └─────────────┘
+                    Kharis Lost & Found
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+          Members                   Administrators
+              │                           │
+              └─────────────┬─────────────┘
+                            │
+                     Web Application
+                            │
+                ┌───────────┴───────────┐
+                │                       │
+         Browser Storage             EmailJS
+                │                       │
+           Local Data              Email Alerts
 
 ⸻
 
-Data & Storage
+Data Storage
 
-The current version stores application data locally within the browser.
+The current version stores application data locally within the user’s browser.
 
-This makes the application lightweight and allows it to operate without a dedicated backend.
+This keeps the application lightweight and allows it to run without a dedicated backend.
 
-However, local browser storage means that information created on one device is not automatically synchronised with another device.
+However, local browser storage means that data created on one device is not automatically synchronised with another device.
 
 For example:
 
-Member Phone
-     │
-     ▼
+Member's Phone
+      │
+      ▼
 Report Item
-     │
-     ▼
+      │
+      ▼
 Browser Storage
-     │
-     X
-     │
+      │
+      X
+      │
+      ▼
 Admin Laptop
 
-Email notifications can alert an administrator that a report was created, but shared data synchronisation will require a central backend.
+The administrator can receive an email notification about a report through EmailJS, but the actual application data remains local to the browser.
+
+A shared backend will be required for true cross-device synchronisation.
 
 ⸻
 
@@ -342,7 +306,7 @@ Roadmap
 
 Completed
 
-* [x]	Lost & found reporting
+* [x]	Lost and found reporting
 * [x]	Item search
 * [x]	Item filtering
 * [x]	Claims
@@ -350,7 +314,7 @@ Completed
 * [x]	Administrative management
 * [x]	Multi-branch structure
 * [x]	Responsive design
-* [x]	iPhone support
+* [x]	Mobile support
 * [x]	iPad support
 * [x]	Dark mode
 * [x]	Image compression
@@ -376,19 +340,19 @@ Planned
 
 Getting Started
 
-Clone the Repository
+Clone the repository
 
 git clone https://github.com/Ruthhilary/KharisLost-Found.git
 
-Navigate to the Project
+Navigate to the project
 
 cd KharisLost-Found
 
-Run Locally
+Run locally
 
 python3 -m http.server 8000
 
-Then open:
+Open the application at:
 
 http://localhost:8000
 
@@ -408,56 +372,82 @@ Current Limitations
 
 Kharis Lost & Found is currently an active development project.
 
-The main architectural limitation is that application data is stored locally in the browser.
+The main architectural limitation is the current browser-based storage model.
 
-A future backend will provide:
+Because application data is stored locally:
 
-* Centralised data
-* Cross-device synchronisation
-* Secure authentication
-* Cloud image storage
-* Data backups
-* Real-time updates
-* Improved scalability
+* Data is not automatically shared between devices.
+* Reports submitted on a member’s phone are not automatically visible on an administrator’s laptop.
+* EmailJS can notify administrators of new reports.
+* A central backend is required for multi-device synchronisation.
+
+The application is being progressively tested across mobile, tablet and desktop environments.
+
+⸻
+
+Future Direction
+
+The long-term goal is to evolve Kharis from a lightweight browser application into a fully synchronised platform.
+
+Future infrastructure could provide:
+
+                  Central Backend
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+     Members        Admins         Branches
+        │              │              │
+        └──────────────┼──────────────┘
+                       │
+                Shared Database
+                       │
+             ┌─────────┴─────────┐
+             │                   │
+        Cloud Storage       Notifications
+
+This would enable shared data, secure authentication, cloud image storage, real-time updates and reliable cross-device access.
 
 ⸻
 
 Vision
 
-Kharis Lost & Found was created around a simple question:
+Kharis Lost & Found was built around a simple problem:
 
 What happens when someone loses something at church?
 
-The answer should not have to be:
+The goal is to replace scattered messages, paper records and manual tracking with one structured digital experience.
 
-“Ask around and hope someone knows.”
+REPORT
+   ↓
+DISCOVER
+   ↓
+CLAIM
+   ↓
+VERIFY
+   ↓
+RETURN
 
-Kharis turns that process into a structured digital workflow.
-
-       REPORT
-          ↓
-       DISCOVER
-          ↓
-        CLAIM
-          ↓
-        VERIFY
-          ↓
-        RETURN
-
-The long-term vision is to create a reliable digital infrastructure for lost property management across churches and multi-branch 
+Kharis aims to make lost property management simple for members and manageable for administrators.
 
 
 ⸻
 
-License
+Project Status
 
-This project is currently maintained as a private development project.
+Active Development
 
-© 2026 Kharis Church. All rights reserved.
+Kharis Lost & Found is an evolving project currently being developed and tested across modern browsers and devices.
 
 ⸻
 
 <p align="center">
-  <strong>Kharis Lost & Found</strong><br>
+  <strong>Kharis Lost & Found</strong>
+  <br>
   <sub>Turning lost property into a structured digital experience.</sub>
 </p>
+<p align="center">
+  <a href="https://ruthhilary.github.io/KharisLost-Found/">
+    View the live application →
+  </a>
+</p>
+```
