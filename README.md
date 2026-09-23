@@ -23,7 +23,7 @@
   <a href="#roadmap">Roadmap</a>
 </p>
 ---
-## Overview
+# Overview
 **Kharis Lost & Found** is a responsive web application designed to modernise how churches and multi-branch organisations manage lost property.
 Instead of relying on paper records, group messages or disconnected spreadsheets, Kharis provides a structured workflow for reporting, discovering, claiming and returning belongings.
 ### Core workflow
