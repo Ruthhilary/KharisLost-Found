@@ -22,7 +22,7 @@ Kharis Lost & Found
 
 ⸻
 
-Overview
+#Overview
 
 Kharis Lost & Found is a responsive web application designed to modernise the way churches and multi-branch organisations manage lost property.
 
